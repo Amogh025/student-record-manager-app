@@ -13,7 +13,7 @@ if not exist out mkdir out
 where javac >nul 2>nul
 if errorlevel 1 (echo JDK 17 or newer is required. Install a JDK and add it to PATH. & exit /b 1)
 echo Compiling application...
-javac -encoding UTF-8 -cp "%DRIVER_JAR%" -d out src\main\java\StudentRecordApp.java
+javac -encoding UTF-8 -cp "%DRIVER_JAR%" -d out StudentRecordApp.java
 if errorlevel 1 exit /b 1
 if not defined DB_USER set "DB_USER=root"
 echo Starting Student Record Manager...

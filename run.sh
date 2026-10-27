@@ -14,5 +14,5 @@ if [ ! -f "$DRIVER_JAR" ]; then
     echo "curl or wget is required to download MySQL Connector/J." >&2; exit 1
   fi
 fi
-javac -encoding UTF-8 -cp "$DRIVER_JAR" -d out src/main/java/StudentRecordApp.java
+javac -encoding UTF-8 -cp "$DRIVER_JAR" -d out StudentRecordApp.java
 java -cp "out:$DRIVER_JAR" StudentRecordApp
